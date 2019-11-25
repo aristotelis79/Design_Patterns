@@ -5,7 +5,6 @@ using System.Xml.Serialization;
 
 namespace DesignPatterns
 {
-
     public static class ExtensionMethods
     {
         public static T DeepCopy<T>(this T self)
