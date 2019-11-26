@@ -103,18 +103,80 @@ namespace DesignPatterns
 
             #endregion
 
+
             #region Bridge
 
-            var rasterRenderer = new RasterRenderer();
-            var vectorRenderer = new VectorRenderer();
-            var circle = new Circle(vectorRenderer,5);
+            //var rasterRenderer = new RasterRenderer();
+            //var vectorRenderer = new VectorRenderer();
+            //var circle = new Circle(vectorRenderer,5);
 
-            circle.Draw();
-            circle.Resize(2);
+            //circle.Draw();
+            //circle.Resize(2);
 
             #endregion
 
-            Console.ReadLine();
+
+            #region Composite
+
+            //var drawing = new GraphicObject {Name = "My Drawing"};
+            //drawing.Children.Add(new SquareC{Color = "Red"});
+            //drawing.Children.Add(new CircleC{Color = "Yellow"});
+
+
+            //var group = new GraphicObject();
+            //group.Children.Add(new SquareC{Color = "Blue"});
+            //group.Children.Add(new CircleC{Color = "Blue"});
+            
+            
+            //drawing.Children.Add(group);
+            
+            //Console.WriteLine(drawing);
+            #endregion
+            #region Composite2
+            //var neuron1 = new Neuron();
+            //var neuron2 = new Neuron();
+
+            //neuron1.ConnectTo(neuron2);
+
+            //var neuronLayer1 = new NeuronLayer();
+            //var neuronLayer2 = new NeuronLayer();
+
+            //neuron1.ConnectTo(neuronLayer1);
+            //neuronLayer1.ConnectTo(neuronLayer2);
+
+            #endregion
+
+            #region Adapter - Decorator
+
+            //ExtendStringBuilder s = "hello ";
+            //s += "world";
+            //Console.WriteLine(s);
+
+            #endregion
+
+
+            #region Dynamic Decorator Composite
+
+            //var square = new SquareD(1.23f);
+            //Console.WriteLine(square.AsString());
+
+            //var colorSquare = new ColorShape(square, "red");
+            //Console.WriteLine(colorSquare.AsString());
+
+            //var transparentSquare = new TransparentShape(colorSquare, 0.5f);
+            //Console.WriteLine(transparentSquare.AsString());
+
+            #endregion
+
+
+            #region FlyWeight
+
+            var ft = new FormatterText("This is a flyWeight pattern");
+            ft.For(10, 18).Capitalize = true;
+            Console.WriteLine(ft);
+            #endregion
+
+            //Console.ReadLine();
 
         }
     }
