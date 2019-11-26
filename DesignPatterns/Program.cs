@@ -171,9 +171,18 @@ namespace DesignPatterns
 
             #region FlyWeight
 
-            var ft = new FormatterText("This is a flyWeight pattern");
-            ft.For(10, 18).Capitalize = true;
-            Console.WriteLine(ft);
+            //var ft = new FormatterText("This is a flyWeight pattern");
+            //ft.For(10, 18).Capitalize = true;
+            //Console.WriteLine(ft);
+            #endregion
+
+
+            #region PropertyProxy
+
+            var demoClass = new DemoClass();
+            demoClass.SomeValue = 10;
+            demoClass.SomeValue = 10;
+
             #endregion
 
             //Console.ReadLine();
